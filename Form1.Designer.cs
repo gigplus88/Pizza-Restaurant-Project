@@ -95,7 +95,6 @@
             this.gpSize.TabIndex = 2;
             this.gpSize.TabStop = false;
             this.gpSize.Text = "Size";
-            this.gpSize.Enter += new System.EventHandler(this.gpSize_Enter);
             // 
             // rbLarge
             // 
@@ -360,7 +359,6 @@
             this.labelToppingValue.TabIndex = 11;
             this.labelToppingValue.Text = "No Topping";
             this.labelToppingValue.UseCompatibleTextRendering = true;
-            this.labelToppingValue.Click += new System.EventHandler(this.labelToppingValue_Click);
             // 
             // labelToppings
             // 
@@ -434,7 +432,6 @@
             this.gpOrderSummary.TabIndex = 17;
             this.gpOrderSummary.TabStop = false;
             this.gpOrderSummary.Text = "Order Summary";
-            this.gpOrderSummary.Enter += new System.EventHandler(this.gpOrderSummary_Enter);
             // 
             // labelPriceValue
             // 
@@ -500,6 +497,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.OldLace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(993, 504);
             this.Controls.Add(this.label3);
@@ -514,6 +513,8 @@
             this.Controls.Add(this.gpSize);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPizzaProject";
             this.Text = "Pizza Order";
             this.Load += new System.EventHandler(this.Form1_Load);

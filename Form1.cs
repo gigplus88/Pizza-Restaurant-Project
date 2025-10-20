@@ -282,14 +282,7 @@ namespace Pizza_Project
             UpdateWhereToEat();
         }
 
-        private void gpSize_Enter(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void gpOrderSummary_Enter(object sender, EventArgs e)
-        {
-        }
+     
 
         private void btnOrderPizza_Click(object sender, EventArgs e)
         {
@@ -354,9 +347,6 @@ namespace Pizza_Project
             ResetForm();
         }
 
-        private void labelToppingValue_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

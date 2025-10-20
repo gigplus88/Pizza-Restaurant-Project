@@ -18,3 +18,14 @@ C:\Solutions C#\Pizza Project\obj\Debug\Pizza Project.csproj.GenerateResource.ca
 C:\Solutions C#\Pizza Project\obj\Debug\Pizza Project.csproj.CoreCompileInputs.cache
 C:\Solutions C#\Pizza Project\obj\Debug\Pizza Project.exe
 C:\Solutions C#\Pizza Project\obj\Debug\Pizza Project.pdb
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\bin\Debug\Pizza Project.exe.config
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\bin\Debug\Pizza Project.exe
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\bin\Debug\Pizza Project.pdb
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Project.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Project.exe.config
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza_Project.FrmPizzaProject.resources
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza_Project.Properties.Resources.resources
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Project.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Project.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Project.exe
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Project.pdb
