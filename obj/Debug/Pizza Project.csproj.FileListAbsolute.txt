@@ -29,3 +29,7 @@ C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Project.cspr
 C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Project.csproj.CoreCompileInputs.cache
 C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Project.exe
 C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Project.pdb
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\bin\Debug\Pizz aBusiness Layer.dll
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\bin\Debug\Pizz aBusiness Layer.pdb
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza Pr.9843C677.Up2Date
+C:\Users\PC\Desktop\Github\Pizza-Restaurant-Project\obj\Debug\Pizza_Project.FrmOrder.resources

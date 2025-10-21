@@ -1,14 +1,8 @@
-﻿using System;
+﻿using Pizz_aBusiness_Layer;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Pizza_Project
 {
@@ -43,7 +37,7 @@ namespace Pizza_Project
                 return;
             }
         }
-        void UpdateCrustType()
+        public void UpdateCrustType()
         {
             UpdatePrice();
 
@@ -137,6 +131,7 @@ namespace Pizza_Project
 
         float GetTotalleSizeprice()
         {
+            
             if (rbSmall.Checked)
 
                 return Convert.ToSingle(rbSmall.Tag);
@@ -202,7 +197,7 @@ namespace Pizza_Project
 
         void UpdatePrice()
         {
-            labelPriceValue.Text = TotallePrices().ToString();
+            labelPriceValue.Text = TotallePrices().ToString() + "$";
         }
         private void rbLarge_CheckedChanged(object sender, EventArgs e)
         {
@@ -290,10 +285,23 @@ namespace Pizza_Project
             {
                 if (MessageBox.Show("Order Placed Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information )== DialogResult.OK)
                 {
+                    string Toppings = labelToppingValue.Text.Trim(),
+                           Size = labelSizeValue.Text.Trim(),
+                           CrustType = labelCrustTypeValue.Text.Trim(),
+                           WhereEat = labelWhereToEatValue.Text.Trim(),
+                           TotalPrice = labelPriceValue.Text.Trim();
+
+                    clsPizzaOrder pizzaOrder = new clsPizzaOrder(Toppings , Size, CrustType , WhereEat , TotalPrice);
+                    clsPizzaClient.SendOrder(pizzaOrder);
+
+
                     gpSize.Enabled = false;
                     gpCrustType.Enabled = false;
                     gpToppings.Enabled = false;
                     gpWhereToEat.Enabled = false;
+
+                    FrmOrder frmOrder = new FrmOrder();
+                    frmOrder.ShowDialog();
                 }
 
 
@@ -307,7 +315,7 @@ namespace Pizza_Project
 
         }
 
-        void UpdateOrderSummary() // (group boxes)لكي يحسب البرنامج القيم المبدئية التي على 
+        void UpdateOrderSummary() 
         {
             UpdateSize();
             UpdateToppings();

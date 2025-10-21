@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Pizz_aBusiness_Layer;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -9,30 +11,48 @@ namespace Pizza_Project
 {
     internal class clsPizzaClient
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
+        public string FullName { get; set; }
 
-        private readonly Queue<clsPizzaOrder> _orderQueue;
-        private readonly object _lock = new object();
+        private static  Queue<clsPizzaOrder> _orderQueue = new Queue<clsPizzaOrder>();
+        private static object _lock = new object();
 
-        public clsPizzaClient(string name, int age, Queue<clsPizzaOrder> orderQueue)
+        public clsPizzaClient(string FullName, Queue<clsPizzaOrder> orderQueue)
         {
-            Name = name;
-            Age = age;
+            this.FullName = FullName;
             _orderQueue = orderQueue;
         }
 
-        // إرسال الطلب إلى الطابور
-        public void SendOrder(clsPizzaOrder order)
+        public static void SendOrder(clsPizzaOrder order)
         {
             lock (_lock)
             {
                 _orderQueue.Enqueue(order);
             }
+            
+        }
+        public static clsPizzaOrder ReceiveOrder()
+        {
+            lock (_lock)
+            {
+                if (_orderQueue.Count > 0)
+                    return _orderQueue.Dequeue(); 
+                else
+                    return null;  
+            }
+        }
+        public static int OrdersCount
+        {
+            get
+            {
+                lock (_lock)
+                {
+                    return _orderQueue.Count;
+                }
+            }
         }
 
-        // محاكاة زبائن يطلبون بيتزا
-        public void SimulateOrders()
+
+        public  void SimulateOrders()
         {
             var random = new Random();
 
@@ -42,16 +62,16 @@ namespace Pizza_Project
 
             for (int i = 0; i < 3; i++)
             {
-                var order = new clsPizzaOrder
-                {
-                    //Size = sizes[random.Next(sizes.Length)],
-                    //Crust = crusts[random.Next(crusts.Length)],
-                    //Price = random.Next(30, 90)
-                };
+                //var order = new clsPizzaOrder
+                //{
+                //    //Size = sizes[random.Next(sizes.Length)],
+                //    //Crust = crusts[random.Next(crusts.Length)],
+                //    //Price = random.Next(30, 90)
+                //};
 
-                order.Toppings.Add(toppings[random.Next(toppings.Length)]);
+                //order.Toppings.Add(toppings[random.Next(toppings.Length)]);
 
-                SendOrder(order);
+                //SendOrder(order);
 
                 Thread.Sleep(1000);
             }

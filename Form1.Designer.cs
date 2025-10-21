@@ -57,7 +57,6 @@
             this.labelWhereToEatValue = new System.Windows.Forms.Label();
             this.gpOrderSummary = new System.Windows.Forms.GroupBox();
             this.labelPriceValue = new System.Windows.Forms.Label();
-            this.labelPriceDollar = new System.Windows.Forms.Label();
             this.btnOrderPizza = new System.Windows.Forms.Button();
             this.btnResertForm = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -439,23 +438,11 @@
             this.labelPriceValue.BackColor = System.Drawing.Color.Transparent;
             this.labelPriceValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
             this.labelPriceValue.ForeColor = System.Drawing.Color.Navy;
-            this.labelPriceValue.Location = new System.Drawing.Point(902, 442);
+            this.labelPriceValue.Location = new System.Drawing.Point(872, 444);
             this.labelPriceValue.Name = "labelPriceValue";
             this.labelPriceValue.Size = new System.Drawing.Size(57, 51);
             this.labelPriceValue.TabIndex = 18;
             this.labelPriceValue.Text = "0 ";
-            // 
-            // labelPriceDollar
-            // 
-            this.labelPriceDollar.AutoSize = true;
-            this.labelPriceDollar.BackColor = System.Drawing.Color.Transparent;
-            this.labelPriceDollar.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
-            this.labelPriceDollar.ForeColor = System.Drawing.Color.Navy;
-            this.labelPriceDollar.Location = new System.Drawing.Point(861, 442);
-            this.labelPriceDollar.Name = "labelPriceDollar";
-            this.labelPriceDollar.Size = new System.Drawing.Size(46, 51);
-            this.labelPriceDollar.TabIndex = 19;
-            this.labelPriceDollar.Text = "$";
             // 
             // btnOrderPizza
             // 
@@ -487,7 +474,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(668, 417);
+            this.label3.Location = new System.Drawing.Point(649, 418);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 29);
             this.label3.TabIndex = 21;
@@ -505,7 +492,6 @@
             this.Controls.Add(this.btnResertForm);
             this.Controls.Add(this.btnOrderPizza);
             this.Controls.Add(this.gpOrderSummary);
-            this.Controls.Add(this.labelPriceDollar);
             this.Controls.Add(this.labelPriceValue);
             this.Controls.Add(this.gpToppings);
             this.Controls.Add(this.gpWhereToEat);
@@ -564,7 +550,6 @@
         private System.Windows.Forms.Label labelWhereToEatValue;
         private System.Windows.Forms.GroupBox gpOrderSummary;
         private System.Windows.Forms.Label labelPriceValue;
-        private System.Windows.Forms.Label labelPriceDollar;
         private System.Windows.Forms.Button btnOrderPizza;
         private System.Windows.Forms.Button btnResertForm;
         private System.Windows.Forms.Label label3;
